@@ -1,0 +1,687 @@
+import "pe"
+
+rule LeetCheat {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "kernel32.dll"
+        $string2 = "d3d11.dll"
+        $string3 = "D3DCOMPILER_43.dll"
+        $string4 = "WS2_32.dll"
+        $string5 = "USER32.dll"
+        $string6 = "ADVAPI32.dll"
+        $string7 = "SHELL32.dll"
+        $string8 = "ntdll.dll"
+        $string9 = "IMM32.dll"
+    condition:
+        all of them
+}
+
+rule Unicore {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "kernel32.dll"
+        $string2 = "CFGMGR32.dll"
+        $string3 = "IPHLPAPI.DLL"
+        $string4 = "d3d9.dll"
+        $string5 = "ADVAPI32.dll"
+        $string6 = "SHELL32.dll"
+        $string7 = "ole32.dll"
+        $string8 = "WS2_32.dll"
+        $string9 = "HID.DLL"
+        $string10 = "SETUPAPI.dll"
+        $string11 = "ntdll.dll"
+        $string12 = "SHLWAPI.dll"
+        $string13 = "NETAPI32.dll"
+        $string14 = "StrStrIW"
+        $string15 = "VLPGzu"
+    condition:
+        all of them
+}
+
+rule AmphCheat {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "WININET.dll"
+        $string2 = "IMM32.dll"
+        $string3 = "d3dx11_43.dll"
+        $string4 = "D3DCOMPILER_47.dll"
+        $string5 = "KERNEL32.dll"
+        $string6 = "USER32.dll"
+        $string7 = "SHELL32.dll"
+        $string8 = "d3d11.dll"
+        $string9 = "OLEAUT32.dll"
+        $string10 = "ADVAPI32.dll"
+        $string11 = "urlmon.dll"
+        $string12 = "CRYPT32.dll"
+        $string13 = "ntdll.dll"
+        $string14 = "WLDAP32.dll"
+        $string15 = "WS2_32.dll"
+        $string16 = "bcrypt.dll"
+    condition:
+        all of them
+}
+
+import "pe"
+
+rule EngineControl {
+    strings:
+        $exeString = "!This program cannot be run in DOS mode."
+        $string1 = ".RvP("
+    condition:
+        any of them and pe.imphash() == "bd28167c2266512d34002d70334dab19"
+}
+
+rule MindsellingCleaner {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "MindCleaner.Login.resources"
+    condition:
+        all of them
+}
+
+rule HxCheats {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "@.gay0"
+        $string2 = "D3DXCreateTextureFromFileInMemory"
+        $string3 = "d3dx9_43.dll"
+    condition:
+        all of them
+}
+
+rule LuRue {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "imgui_log.txt"
+        $string2 = "FiveM_GTAProcess.exe"
+        $string3 = "Trigger bot"
+    condition:
+        all of them
+}
+rule FlySide {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "api-ms-win-crt-utility-l1-1-0.dll"
+        $string2 = "D3DCOMPILER_43.dll"
+        $string3 = "WLDAP32.dll"
+        $string4 = "GDI32.dll"
+        $string5 = "ole32.dll"
+        $string6 = "VCRUNTIME140.dll"
+        $string7 = "d3dx11_43.dll"
+        $string8 = "WINHTTP.dll"
+        $string9 = "D3D11CreateDeviceAndSwapChain"
+        $string10 = "D3DX11CreateShaderResourceViewFromMemory"
+    condition:
+        all of them
+}
+
+rule ProcessHollowing1 {
+    strings:
+        $a = "process hollowing" wide ascii
+    condition:
+        $a
+}
+
+rule ProcessHollowing2 {
+    strings:
+        $a = "processhollowing" wide ascii
+    condition:
+        $a
+}
+
+rule ProcessHollowing3 {
+    strings:
+        $a = "hollowing process" wide ascii
+    condition:
+        $a
+}
+
+rule ProcessHollowing4 {
+    strings:
+        $a = "process hollowed" wide ascii
+    condition:
+        $a
+}
+
+import "pe"
+
+rule XenonPacked {
+    meta:
+        name = "Xenon Packed"
+    strings:
+        $s1 = ".mxrcy0" wide ascii nocase
+    condition:
+        $s1
+}
+
+rule Skript {
+    meta:
+        name = "Skript"
+        severity = "severe"
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "VWATAVAWH"
+        $string2 = "D3D11CreateDeviceAndSwapChain"
+        $string3 = "sk_launcher.pdb"
+    condition:
+        all of them
+}
+
+rule Susano {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "Loader.exe"
+        $string2 = "SHGetDiskFreeSpaceA"
+        $string3 = "curl_easy_cleanup"
+        $string4 = "GetCursor"
+        $string5 = "@.data"
+    condition:
+        all of them
+}
+
+rule Nullx32 {
+    meta:
+        author = "Sommer"
+    strings:
+        $stringExe = "!This program cannot be run in DOS mode."
+        $string1 = "\\config\\config.json"
+        $string2 = "Enabled##Aimbot"
+        $string3 = "Style##PedVisualsBox"
+    condition:
+        all of them
+}
+
+rule HydroGen {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "D3DXCreateTextureFromFileInMemory"
+        $string2 = "USER32.dll"
+        $string3 = "KERNEL32.dll"
+        $string4 = "ntdll.dll"
+        $string5 = "d3d9.dll"
+        $string6 = "WS2_32.dll"
+        $string7 = "OLEAUT32.dll"
+        $string8 = "d3dx9_43.dll"
+        $string9 = "ADVAPI32.dll"
+        $string10 = "SHELL32.dll"
+    condition:
+        all of them
+}
+
+rule RedEngine {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "XINPUT1_3.dll"
+        $string2 = "D3DXCreateTextureFromFileInMemory"
+        $string3 = "d3dx9_43.dll"
+        $string4 = "IMM32.dll"
+        $string5 = "d3d9.dll"
+        $string6 = "dxgi.dll"
+    condition:
+        all of them
+}
+
+rule ProjectLoader {
+    strings:
+        $b = {5B 31 5D 20 59 6F 75 20 6D 75 73 74 20 66 69 72 73 74 20 6F 70 65 6E 20 74 68 65 20 4C 6F 61 64 65 72 0A 20 20 5B 32 5D 20 53 65 6C 65 63 74 20 74 68 65 20 46 69 76 65 4D 20 70 72 6F 64 75 63 74 20 6F 6E 20 74 68 65 20 77 65 62 73 69 74 65 2E}
+    condition:
+        $b
+}
+
+rule CFXLovers {
+    strings:
+        $b = {43 20 3A 20 5C 20 55 20 73 20 65 20 72 20 73 20 5C 20 74 20 61 20 68 20 61 20 72 20 5C 20 44 20 65 20 73 20 6B 20 74 20 6F 20 70 20 5C 20 74 20 6F 20 75 20 74 20 5C 20 43 20 68 20 65 20 61 20 74 20 5C 20 50 20 72 20 69 20 64 20 65 20 68 20 6F 20 6F 20 6B}
+    condition:
+        $b
+}
+
+rule TZX {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = ".svh1"
+        $string2 = "D3D11CreateDevice"
+        $string3 = "WTSAPI32.dll"
+        $string4 = "IMM32.dll"
+        $string5 = "d3d11.dll"
+        $string6 = "ADVAPI32.dll"
+    condition:
+        all of them
+}
+
+rule VanishBypass {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "Cleaner_Load"
+        $string2 = "get_lastlogin"
+        $string3 = "DiscordMessage"
+        $string4 = "1337 Injected!"
+        $string5 = "ExecuteMemoryCleaning"
+    condition:
+        all of them
+}
+
+rule GosthExternal {
+    strings:
+        $a = {21 54 68 69 73 20 70 72 6F 67 72 61 6D 20 63 61 6E 6E 6F 74 20 62 65 20 72 75 6E 20 69 6E 20 44 4F 53 20 6D 6F 64 65}
+        $b = {61 69 6D 62 6F 74 5F 61 63 74 69 76 65}
+        $c = {73 69 6C 65 6E 74 5F 61 63 74 69 76 65}
+        $d = {65 73 70 5F 6B 65 79 00 65 73 70 5F 6E 70 63 00 65 73 70 5F 61 63 74 69 76 65}
+        $e = {65 73 70 5F 73 6B 65 6C 65 74 6F 6E}
+    condition:
+        all of them
+}
+
+rule Eulen {
+    strings:
+        $stringEXE = "This program cannot be run in DOS mode"
+        $string1 = "D3D11CreateDeviceAndSwapChain"
+        $string2 = "d3d11.dll"
+        $string3 = "GetComputerNameA"
+        $string4 = "api-ms-win-crt-locale-l1-1-0.dll"
+        $string5 = "api-ms-win-crt-time-l1-1-0.dll"
+        $string6 = "SHGetKnownFolderPath"
+        $string7 = "UuidToStringW"
+    condition:
+        all of them
+}
+rule Eulen_O_Hash_Check {
+    strings:
+        $hash = "ba80c93e7e83f3abdf859d56b7a0bbd1ec7949958798a100cfccdfae43067fcec54b08c86c444cc2ea9bea419f34309f7fed4d332a06e96391918cf037c927cb"
+    condition:
+        $hash
+}
+
+rule Process_Hollowing_A {
+    strings:
+        $dll = "processhollow"
+    condition:
+        $dll
+}
+
+rule Process_Hollowing_B {
+    strings:
+        $dll = "Hollowing"
+    condition:
+        $dll
+}
+
+rule Process_Hollowing_C {
+    strings:
+        $dll = "Transacted_hollowing64.exe"
+    condition:
+        $dll
+}
+rule Lavender {
+    strings:
+        $lav_specific1 = "CryptDestroyKey"
+        $lav_specific2 = "1.2.840.113549.1.9.1"
+        $lav_specific3 = "1.2.840.10045.3.0.1"
+        $lav_specific4 = "1.2.840.113549.1.1.10"
+        
+        $lav_hex_string1 = { 41 d3 c8 f7 d2 44 22 c4 66 41 0f c8 40 84 f7 44 23 da 4c 8b }
+        $lav_hex_string2 = { c0 c5 ad 44 31 0c 24 66 23 ec 40 d2 d5 66 41 0f bd ee 5d f8 }
+        $lav_hex_string3 = { e9 58 42 01 00 f7 d7 ff c7 55 66 f7 dd 66 0f ba e5 c5 f8 31 }
+        $lav_hex_string4 = { 03 89 43 08 89 43 04 48 8b 07 8b 33 80 78 59 00 74 0e 8b d6 }
+
+        $lav_match_string1 = "<security>"
+        $lav_match_string2 = "<requestedPrivileges>"
+        $lav_match_string3 = "</security>"
+        $lav_match_string4 = "<requestedExecutionLevel level='requireAdministrator' uiAccess='false' />"
+
+    condition:
+        (2 of ($lav_specific*) and 2 of ($lav_hex_string*) and 1 of ($lav_match_string*))
+}
+
+rule UnityFiveM {
+    strings:
+        $unity_specific1 = "z9fN="
+        $unity_specific2 = "5KVYw"
+        $unity_specific3 = "=Syic"
+        $unity_specific4 = "OwGtC"
+
+        $unity_hex_string1 = { 7A 39 66 4E 3D }
+        $unity_hex_string2 = { 35 4B 56 59 77 }
+        $unity_hex_string3 = { 3D 53 79 69 63 }
+        $unity_hex_string4 = { 4F 77 47 74 43 }
+
+        $unity_match_string1 = "<security>"
+        $unity_match_string2 = "<requestedPrivileges>"
+        $unity_match_string3 = "</security>"
+        $unity_match_string4 = "<requestedExecutionLevel level='requireAdministrator' uiAccess='false' />"
+
+    condition:
+        (2 of ($unity_specific*) and 2 of ($unity_hex_string*) and 1 of ($unity_match_string*))
+}
+rule Runner {
+    strings:
+        $runner_specific1 = "XaK>*["
+        $runner_specific2 = "gD9]B5z,U2"
+        $runner_specific3 = "tnaZ>!x"
+        $runner_specific4 = "81a0"
+
+        $runner_hex_string1 = { 58  61  4B  3E  2A  5B }
+        $runner_hex_string2 = { 67  44  39  5D  42  35  7A  2C  55  32 }
+        $runner_hex_string3 = { 74  6E  61  5A  3E  21  78 }
+        $runner_hex_string4 = { 38  31  61  30  20 }
+
+        $runner_match_string1 = "<security>"
+        $runner_match_string2 = "<requestedPrivileges>"
+        $runner_match_string3 = "</security>"
+        $runner_match_string4 = "<requestedExecutionLevel level='asInvoker' uiAccess='false' />"
+
+    condition:
+        (2 of ($runner_specific*) and 2 of ($runner_hex_string*) and 1 of ($runner_match_string*))
+}
+rule xrc {
+    strings:
+        $xrc_specific1 = "(Auto-disabled ImGuiDebugLogFlags_EventClipper to avoid spamming)"
+        $xrc_specific2 = "r\\x64\\Release\\Fivem-External.pdb"
+        $xrc_specific3 = "flag-checkered"
+        $xrc_specific4 = "_get_stream_buffer_pointers"
+
+        $xrc_hex_string1 = { 28  41  75  74  6F  2D  64  69  73  61  62  6C  65  64  20  49  6D  47  75  69  44  65  62  75  67  4C  6F  67  46  6C  61  67 73  5F  45  76  65  6E  74  43  6C  69  70  70  65  72  20  74 6F  20  61  76  6F  69  64  20  73  70  61  6D  6D  69  6E  67 29 }
+        $xrc_hex_string2 = { 72  5C  78  36  34  5C  52  65  6C  65  61  73  65  5C  46  69 76  65  6D  2D  45  78  74  65  72  6E  61  6C  2E  70  64  62 }
+        $xrc_hex_string3 = { 66  6C  61  67  2D  63  68  65  63  6B  65  72  65  64 }
+        $xrc_hex_string4 = { 5F  67  65  74  5F  73  74  72  65  61  6D  5F  62  75  66  66  65 72  5F  70  6F  69  6E  74  65  72  73 }
+
+        $xrc_match_string1 = "<security>"
+        $xrc_match_string2 = "<requestedPrivileges>"
+        $xrc_match_string3 = "</security>"
+        $xrc_match_string4 = "<requestedExecutionLevel level='requireAdministrator' uiAccess='false' />"
+
+    condition:
+        (2 of ($xrc_specific*) and 2 of ($xrc_hex_string*) and 1 of ($xrc_match_string*))
+}
+rule RunnerPlus {
+    strings:
+        $RunnerPlus_specific1 = "api-ms-win-crt-string-l1-1-0.dll"
+        $RunnerPlus_specific2 = "ueKZ;Um.tme"
+        $RunnerPlus_specific3 = "C0rUASBNLu"
+        $RunnerPlus_specific4 = "VjwA(r~GD)"
+
+        $RunnerPlus_hex_string1 = { 61  70  69  2D  6D  73  2D  77  69  6E  2D  63  72  74  2D  73 
+    74  72  69  6E  67  2D  6C  31  2D  31  2D  30  2E  64  6C  6C }
+        $RunnerPlus_hex_string2 = { 75  65  4B  5A  3B  55  6D  2E  74  6D  65 }
+        $RunnerPlus_hex_string3 = { 43  30  72  55  41  53  42  4E  4C  75 }
+        $RunnerPlus_hex_string4 = { 56  6A  77  41  28  72  7E  47  44  29 }
+
+        $RunnerPlus_match_string1 = "<security>"
+        $RunnerPlus_match_string2 = "<requestedPrivileges>"
+        $RunnerPlus_match_string3 = "</security>"
+        $RunnerPlus_match_string4 = "<requestedExecutionLevel level='asInvoker' uiAccess='false' />"
+
+    condition:
+        (2 of ($RunnerPlus_specific*) and 2 of ($RunnerPlus_hex_string*) and 1 of ($RunnerPlus_match_string*))
+}
+rule keys2xinput {
+    strings:
+        $keys2xinput_specific1 = "keys2xinput_gui.Properties"
+        $keys2xinput_specific2 = "keys2xinput_gui.DialogChangeHotKey.resources"
+        $keys2xinput_specific3 = "keys2xinput_gui.DialogChangeBind.resources"
+        $keys2xinput_specific4 = "keys2xinput_gui.UCConfigDpad.resources"
+
+        $keys2xinput_hex_string1 = { 6B  65  79  73  32  78  69  6E  70  75  74  5F  67  75  69  2E 
+    50  72  6F  70  65  72  74  69  65  73 }
+        $keys2xinput_hex_string2 = { 6B  65  79  73  32  78  69  6E  70  75  74  5F  67  75  69  2E 
+    44  69  61  6C  6F  67  43  68  61  6E  67  65  48  6F  74  4B 
+    65  79  2E  72  65  73  6F  75  72  63  65  73 }
+        $keys2xinput_hex_string3 = {6B  65  79  73  32  78  69  6E  70  75  74  5F  67  75  69  2E 
+    44  69  61  6C  6F  67  43  68  61  6E  67  65  42  69  6E  64 
+    2E  72  65  73  6F  75  72  63  65  73 }
+        $keys2xinput_hex_string4 = { 6B  65  79  73  32  78  69  6E  70  75  74  5F  67  75  69  2E 
+    55  43  43  6F  6E  66  69  67  44  70  61  64  2E  72  65  73 
+    6F  75  72  63  65  73 }
+
+        $keys2xinput_match_string1 = "<security>"
+        $keys2xinput_match_string2 = "</application>"
+        $keys2xinput_match_string3 = "<!-- Windows 8.1 -->"
+        $keys2xinput_match_string4 = "<!-- A list of the Windows versions that this application has been tested on"
+
+    condition:
+        (2 of ($keys2xinput_specific*) and 2 of ($keys2xinput_hex_string*) and 1 of ($keys2xinput_match_string*))
+}
+rule checkConfigFileFavorites {
+    strings:
+        $config_file = "favorites.cfg"
+        $action_created = "Created"
+        $action_renamed = "Renamed/Moved"
+        $action_deleted = "Deleted"
+
+        $log_file = "Susano | File: "
+        $log_folder = "Susano | Folder: "
+        $log_action = "Susano | Action: "
+
+    condition:
+        $config_file and ($action_created or $action_renamed or $action_deleted) and 
+        ($log_file and $log_folder and $log_action)
+}
+rule processFileEntry {
+    strings:
+        $temp_dir = "/appdata/local/temp/" nocase
+        $dll_extension = ".dll"
+        $file_name_regex = /^[a-zA-Z0-9]{20,}\.dll$/
+
+        $log_specific = "Action: "
+
+    condition:
+        $temp_dir and $dll_extension and $file_name_regex and $log_specific
+}
+rule logSusanoLoader {
+    strings:
+        $susano_log_specific1 = "Susano | File: ["
+        $susano_log_specific2 = "Susano | Folder: ["
+        $susano_log_specific3 = "Susano | Action: ["
+
+        $dll_extension = ".dll"
+        $temp_path = "/appdata/local/temp/" nocase
+
+    condition:
+        ($susano_log_specific1 or $susano_log_specific2 or $susano_log_specific3) and 
+        $dll_extension and $temp_path
+}
+rule GenericCheat {
+   strings:
+        $stringExe = "!This program cannot be run in DOS mode."
+        $string1 = "dagger"
+        $string2 = "bottle"
+        $string3 = "crowbar"
+        $string4 = "unarmed"
+        $string5 = "flashlight"
+        $string6 = "golfclub"
+        $string7 = "hammer"
+        $string8 = "hatchet"
+        $string9 = "knuckle"
+        $string10 = "knife"
+        $string11 = "machete"
+        $string12 = "switchblade"
+        $string13 = "nightstick"
+        $string14 = "wrench"
+        $string15 = "battleaxe"
+        $string16 = "poolcue"
+        $string17 = "stone_hatchet"
+        $string18 = "pistol"
+        $string19 = "pistol_mk2"
+        $string20 = "combatpistol"
+        $string21 = "appistol"
+        $string22 = "stungun"
+        $string23 = "pistol50"
+        $string24 = "snspistol"
+        $string25 = "snspistol_mk2"
+        $string26 = "heavypistol"
+        $string27 = "vintagepistol"
+        $string28 = "flaregun"
+        $string29 = "marksmanpistol"
+        $string30 = "revolver"
+        $string31 = "revolver_mk2"
+        $string32 = "doubleaction"
+        $string33 = "raypistol"
+        $string34 = "ceramicpistol"
+        $string35 = "navyrevolver"
+        $string36 = "microsmg"
+        $string37 = "smg_mk2"
+        $string38 = "assaultsmg"
+        $string39 = "combatpdw"
+        $string40 = "machinepistol"
+        $string41 = "minismg"
+        $string42 = "raycarbine"
+        $string43 = "pumpshotgun"
+        $string44 = "pumpshotgun_mk2"
+        $string45 = "sawnoffshotgun"
+        $string46 = "assaultshotgun"
+        $string47 = "bullpupshotgun"
+        $string48 = "musket"
+        $string49 = "heavyshotgun"
+        $string50 = "dbshotgun"
+        $string51 = "autoshotgun"
+        $string52 = "assaultrifle"
+        $string53 = "assaultrifle_mk2"
+        $string54 = "carbinerifle"
+        $string55 = "carbinerifle_mk2"
+        $string56 = "advancedrifle"
+        $string57 = "specialcarbine"
+        $string58 = "specialcarbine_mk2"
+        $string59 = "bullpuprifle"
+        $string60 = "bullpuprifle_mk2"
+        $string61 = "compactrifle"
+        $string62 = "combatmg"
+        $string63 = "combatmg_mk2"
+        $string64 = "gusenberg"
+        $string65 = "sniperrifle"
+        $string66 = "heavysniper"
+        $string67 = "heavysniper_mk2"
+        $string68 = "marksmanrifle"
+        $string69 = "marksmanrifle_mk2"
+        $string70 = "grenadelauncher"
+        $string71 = "grenadelauncher_smoke"
+        $string72 = "minigun"
+        $string73 = "firework"
+        $string74 = "railgun"
+        $string75 = "hominglauncher"
+        $string76 = "compactlauncher"
+        $string77 = "rayminigun"
+        $string78 = "grenade"
+        $string79 = "bzgas"
+        $string80 = "smokegrenade"
+        $string81 = "flare"
+        $string82 = "molotov"
+        $string83 = "stickybomb"
+        $string84 = "proxmine"
+        $string85 = "snowball"
+        $string86 = "pipebomb"
+        $stringa1 = "general_noclip_enabled"
+        $stringa2 = "general_noclip_speed"
+        $stringa3 = "keybinds_menu_open"
+        $stringa4 = "keybinds_aimbot"
+        $stringa5 = "aimbot_enabled"
+        $stringa6 = "aimbot_draw_selected_bone"
+        $stringa7 = "aimbot_selected_bone"
+        $stringa8 = "aimbot_selected_bone_color"
+        $stringa9 = "aimbot_smooth_enabled"
+        $stringa10 = "aimbot_smooth_speed"
+        $stringa11 = "aimbot_draw_fov"
+        $stringa12 = "aimbot_fov_size"
+        $stringa13 = "aimbot_fov_color"
+        $stringa14 = "vehicles_enabled"
+        $stringa15 = "vehicles_range"
+        $stringa16 = "vehicles_enable_vehicle_count"
+        $stringa17 = "players_enabled"
+        $stringa18 = "players_range"
+        $stringa19 = "players_bones_ebaled"
+        $stringa20 = "players_bones_color"
+        $stringa21 = "players_box_enabled"
+        $stringa22 = "players_box_type"
+        $stringa23 = "players_box_color"
+        $stringa24 = "players_health_bar_enabled"
+        $stringa25 = "players_health_bar_type"
+        $stringa26 = "players_health_bar_color"
+        $stringa27 = "players_armor_bar_enabled"
+        $stringa28 = "players_armor_bar_type"
+        $stringa29 = "players_armor_bar_color"
+        $stringa30 = "players_weapon_enabled"
+        $stringa31 = "players_weapon_color"
+        $stringa32 = "players_distance_enabled"
+        $stringa33 = "players_distance_color"
+        $stringa34 = "players_enable_player_count"
+        $stringa35 = "players_enable_admin_count"
+    condition:
+        6 of them
+}
+rule calculate_time_difference {
+    strings:
+        $time_message = "ore, minuti, secondi"
+    condition:
+        any of ($time_message)
+}
+rule process_entry {
+    strings:
+        $path_temp = "AppData/Local/Temp"
+        $path_system32 = "c:/windows/system32/"
+        $path_edge = "c:/program files (x86)/microsoft/edge/application"
+        $path_chrome = "c:/program files/google/chrome/application"
+        $path_crashdumps = "AppData/Local/Crashdumps"
+        $path_spotify = "AppData/Roaming/Spotify"
+        $path_keyser = "C:/Windows/IME"
+    condition:
+        any of ($path_temp, $path_system32, $path_edge, $path_chrome, $path_crashdumps, $path_spotify, $path_keyser)
+}
+rule process_app_crash_entries {
+    strings:
+        $ctfmon = "ctfmon"
+        $mxrcy = "mxrcy"
+    condition:
+        any of ($ctfmon, $mxrcy)
+}
+rule process_temp_dir_entries {
+    strings:
+        $dll_name = "6e6f4e616d65.dll"
+        $sys_name = "miyalaaskim.sys"
+    condition:
+        any of ($dll_name, $sys_name)
+}
+rule process_xenon_reg_key {
+    strings:
+        $regkey = "regkey.dat"
+    condition:
+        $regkey
+}
+rule process_xenon_reshade {
+    strings:
+        $reshade_ini = "reshade.ini"
+    condition:
+        $reshade_ini
+}
+rule process_antiecho_dll {
+    strings:
+        $gcapi_dll = "gcapi.dll"
+    condition:
+        $gcapi_dll
+}
+rule process_appcrash_entries {
+    strings:
+        $ctfmon_file = "ctfmon"
+        $mxrcy_file = "mxrcy"
+    condition:
+        any of ($ctfmon_file, $mxrcy_file)
+}
+rule process_xenon_regkey {
+    strings:
+        $regkey_file = "regkey.dat"
+    condition:
+        $regkey_file
+}
+rule check_xenon {
+    strings:
+        $bink2w64 = "bink2w64.dll"
+        $gffile = "GFSDK_TXAA.win32.dll"
+        $hash1 = "d53c355ea72f5918553a142177dd1a3dd95f998b"
+        $hash2 = "2ff0a0ff33b96e92a2ec85ff2bc7c30212d32bc6"
+    condition:
+        any of ($bink2w64, $gffile, $hash1, $hash2)
+}
+rule log_runner_loader {
+    strings:
+        $runner_loader = "RUNNER"
+        $target_file = "cr_319.ini"
+    condition:
+        $runner_loader and $target_file
+}
